@@ -1,0 +1,26 @@
+<div class="container">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <% contatos.forEach(contato => { %>
+                       
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title"> Nome: <%= contato.nome %></h5>
+                                <h5 class="card-title">E-mail:  <%= contato.email %></h5>
+                                <h5 class="card-title">Assunto:  <%= contato.assunto %></h5>
+                                <p class="card-text"><%= contato.mensagem.substring(0,50) %>
+                                     ...
+                                </p>
+                                <p class="card-text">
+                                    <small class="text-muted">
+                                        <%= contato.data_envio.toLocaleString('pt-BR').split(' ').join(' às ') %>
+                                    </small>
+                                </p>
+                                <a class="btn btn-primary" href="/contato?id=<%= contato.id_contato %>">Lê toda</a>
+                            </div>
+                        </div>
+                    </div>
+                    <% }) %>
+                    
+                </div>
+            </div>

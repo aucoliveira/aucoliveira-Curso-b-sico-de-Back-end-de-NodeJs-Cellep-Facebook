@@ -1,0 +1,26 @@
+<%- include('../common/header.ejs') %>
+    <%- include('../common/menu.ejs') %>
+        <main class="mb-4">
+            <div class="bg-light p-5 mb-4">
+                <div class="container text-center">
+                    <h1>Nova Notícia</h1>
+                </div>
+            </div>
+
+            <div class="container">
+                <form action="/admin/salvar-noticia" method="POST">
+                    <div class="mb-3">
+                        <label for="titulo" class="form-label">Titulo</label>
+                        <input type="text" class="form-control" id="titulo" name="titulo" autocomplete="off" placeholder="Titulo da notícia" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="conteudo" class="form-label">Conteúdo</label>
+                        <textarea name="conteudo" id="conteudo" cols="30" rows="10" class="form-control" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg w-100">Criar</button>
+                </form>
+            </div>
+
+        </main>
+
+<%- include('../common/footer.ejs') %>

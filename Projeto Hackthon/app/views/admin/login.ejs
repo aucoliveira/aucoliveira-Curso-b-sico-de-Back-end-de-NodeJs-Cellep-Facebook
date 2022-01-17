@@ -1,0 +1,27 @@
+<%- include('../common/header.ejs') %>
+   
+        
+    <main class="form-signin">
+        <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+    <h2 class="w3-text-light-grey ">Local restrito!</h2>
+    <hr style="width:200px" class="w3-opacity">
+            <form action="/admin/autenticar" method="POST">
+                <h1 class="mb-3 text-center">
+                    Login
+                </h1>
+                <div class="form-floating">
+                    <input id="usuario" name="usuario" type="text" class="form-control" placeholder="Usuário"
+                    autocomplete="off" required>
+                    <label for="usuario"> Usuário</label>
+                </div>
+                <div class="form-floating">
+                    <input id="senha" name="senha" type="password" class="form-control" placeholder="Senha"
+                    autocomplete="off" required>
+                    <label for="senha"> Senha</label>
+                </div>
+                <button class="btn btn-lg btn-primary w-100" type="submit">Entrar</button>
+            </form>
+        </div>
+        </main>
+
+<%- include('../common/footer.ejs') %>

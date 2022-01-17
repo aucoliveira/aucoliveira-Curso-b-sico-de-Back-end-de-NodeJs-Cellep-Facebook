@@ -1,0 +1,13 @@
+{
+  "name": "projeto-hackthon",
+  "version": "1.0.0",
+  "description": "Projeto para o curso back-end NODEJS, da Cellep e Estaçao Hack Facebook",
+  "main": "app.js",
+
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node app.js"
+  },
+  "author": "Augusto Cesar Barros de Oliveira azotaugusto@gmail.com",
+  "license": "ISC"
+}

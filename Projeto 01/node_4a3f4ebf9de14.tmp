@@ -1,0 +1,29 @@
+//console.log("Olá mundo!")
+
+// Biblioteca HttP
+// Incorporando a nossa aplicação
+
+//ultilizando o método require nos podemons importar modulos, bibliotecas entre outros
+const http = require('http')
+
+// Criamos im servidor e passamos como argumento uma função seta
+// que recebe as requisições e encaminha as respostas
+const server = http.createServer( (rep, res) => {
+    res.end(
+        `<html>
+            <head>
+                <title>Servidor Node.JS</title>
+            </head>
+            <body>
+                <h1>
+                    Olá mnundo!
+                </h1>
+            </body>
+        </html>`
+    )
+} )
+
+server.listen(3000, () => {
+    console.log('Servidor escutando a porta 3000')
+    console.log('Precione CTRL+C para encerrar')
+} )

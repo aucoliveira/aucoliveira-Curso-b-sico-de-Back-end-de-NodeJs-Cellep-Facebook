@@ -1,0 +1,45 @@
+<%- include('../common/header') %>
+        
+<!-- corpo do body -->
+  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+    <h2 class="w3-text-light-grey">Notícia</h2>
+    <hr style="width:200px" class="w3-opacity">
+    
+    <hr style="width:200px" class="w3-opacity">
+          <div class="p-5 mb-4">
+              <div class="container text-center">
+                <h1>
+                    <%= noticia.titulo %>
+
+                </h1>
+                
+              </div>
+          </div>
+
+          <div class="container">
+              <div class="row d-flex justify-content-center">
+                  <div class="col-12">
+                      <p>
+                          <small>
+                              <%= noticia.data_criacao.toLocaleString('pt-BR').split(' ').join(' às ') %>
+                          </small>
+                      </p>
+                      <hr>
+                      <p>
+                          <%= noticia.conteudo %>
+                      </p>
+                      <p>
+                          <%= noticia.fonte %>
+                      </p>
+                  </div>
+              </div>
+          </div>
+          </div>
+    
+    
+  <!-- End Contact Section -->
+  </div>
+
+        
+
+<%- include('../common/footer') %>
